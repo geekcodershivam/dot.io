@@ -1,0 +1,20 @@
+{
+  "name": "dot",
+  "version": "1.0.0",
+  "description": "A code editor for the modern developer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . ",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . dot --overwrite --platform=win32 --arch=ia32 --icon=img/snippetSquare.ico.png --prune=true --out=release-builds --version-com.dot=CE --version-string.Dot=CE --version-string.ProductName=\"dot\"",    
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/snippetSquare.ico --prune=true --out=release-builds"
+  },
+  "author": "geekcodershivam",
+  "license": "ISC",
+  "devDependencies": {
+    "asar": "^0.12.3",
+    "electron": "^2.0.5",
+    "electron-packager": "12.1.0"
+  }
+}
